@@ -1,31 +1,32 @@
+<<<<<<< HEAD
 # Wanderlust - Travel Accommodation Platform
 
 A full-stack web application for booking and managing travel accommodations, built with Node.js, Express.js, MongoDB, and EJS templating.
 
 ## Features
 
-- **User Authentication**: Sign up, login, and logout functionality
-- **Property Listings**: Browse, create, edit, and delete accommodation listings
-- **Review System**: Rate and review properties with star ratings and comments
-- **Responsive Design**: Mobile-friendly interface using Bootstrap
-- **Image Management**: Support for external image URLs (e.g., Unsplash)
-- **Authorization**: Users can only edit/delete their own listings and reviews
+**User Authentication**: Sign up, login, and logout functionality
+**Property Listings**: Browse, create, edit, and delete accommodation listings
+**Review System**: Rate and review properties with star ratings and comments
+**Responsive Design**: Mobile-friendly interface using Bootstrap
+**Image Management**: Support for external image URLs (e.g., Unsplash)
+**Authorization**: Users can only edit/delete their own listings and reviews
 
 ## Tech Stack
 
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB with Mongoose ODM
-- **Authentication**: Passport.js with local strategy
-- **Password Hashing**: bcrypt
-- **Templating**: EJS
-- **Frontend**: HTML, CSS, Bootstrap 5
-- **Icons**: Font Awesome
+**Backend**: Node.js, Express.js
+**Database**: MongoDB with Mongoose ODM
+**Authentication**: Passport.js with local strategy
+**Password Hashing**: bcrypt
+**Templating**: EJS
+**Frontend**: HTML, CSS, Bootstrap 5
+**Icons**: Font Awesome
 
 ## Prerequisites
 
-- Node.js (v14 or higher)
-- MongoDB (running locally or cloud instance)
-- npm or yarn package manager
+Node.js (v14 or higher)
+MongoDB (running locally or cloud instance)
+npm or yarn package manager
 
 ## Installation
 
@@ -177,19 +178,19 @@ The application uses three main collections:
 ### Common Issues
 
 1. **MongoDB Connection Error**
-   - Ensure MongoDB is running: `mongod`
-   - Check connection string in `server.js`
+- Ensure MongoDB is running: `mongod`
+- Check connection string in `server.js`
 
 2. **Port Already in Use**
-   - Change the port in `server.js` or kill the process using port 8080
+- Change the port in `server.js` or kill the process using port 8080
 
 3. **Authentication Issues**
-   - Clear browser cookies and try logging in again
-   - Check that the user exists in the database
+- Clear browser cookies and try logging in again
+- Check that the user exists in the database
 
 4. **Image Loading Issues**
-   - Verify image URLs are accessible
-   - Check browser console for CORS errors
+- Verify image URLs are accessible
+- Check browser console for CORS errors
 
 ### Development Tips
 
@@ -212,4 +213,7 @@ This project is licensed under the MIT License.
 
 ## Support
 
-For support or questions, please open an issue in the repository or contact the development team. 
+For support or questions, please open an issue in the repository or contact the development team.
+=======
+# Wunderlust
+>>>>>>> be56f2d55a8e887cdcfd32f8fcdb8d12464248a3
