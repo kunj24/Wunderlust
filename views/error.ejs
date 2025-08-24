@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card border-danger">
+                <div class="card-header bg-danger text-white">
+                    <h3 class="mb-0">Error</h3>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Something went wrong!</h5>
+                    <p class="card-text">An error occurred while processing your request.</p>
+                    <% if (error && error.message) { %>
+                        <div class="alert alert-danger">
+                            <strong>Error Details:</strong> <%= error.message %>
+                        </div>
+                    <% } %>
+                    <a href="/listings" class="btn btn-primary">Go to Listings</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %> 
