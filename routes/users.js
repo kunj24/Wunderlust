@@ -18,7 +18,17 @@ router.post('/signup', async (req, res) => {
     req.flash('success', 'Welcome to Wanderlust!');
     res.redirect('/login');
   } catch (error) {
-    req.flash('error', 'Error creating account');
+    console.error('Signup error:', error);
+    let message = 'Error creating account';
+    // Duplicate key error (e.g., unique username/email)
+    if (error && error.code === 11000) {
+      const duplicateField = Object.keys(error.keyPattern || {})[0] || 'field';
+      message = `${duplicateField.charAt(0).toUpperCase() + duplicateField.slice(1)} already exists`;
+    } else if (error.name === 'ValidationError') {
+      const details = Object.values(error.errors).map(e => e.message).join(', ');
+      message = `Validation failed: ${details}`;
+    }
+    req.flash('error', message);
     res.redirect('/signup');
   }
 });
