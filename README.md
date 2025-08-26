@@ -1,16 +1,16 @@
 <<<<<<< HEAD
-# Wanderlust - Travel Accommodation Platform
+# Wanderlust - Hotel Listing Platform
 
-A full-stack web application for booking and managing travel accommodations, built with Node.js, Express.js, MongoDB, and EJS templating.
+A full-stack web application for listing and managing hotel properties, built with Node.js, Express.js, MongoDB, and EJS templating.
 
 ## Features
 
-**User Authentication**: Sign up, login, and logout functionality
-**Property Listings**: Browse, create, edit, and delete accommodation listings
-**Review System**: Rate and review properties with star ratings and comments
-**Responsive Design**: Mobile-friendly interface using Bootstrap
-**Image Management**: Support for external image URLs (e.g., Unsplash)
-**Authorization**: Users can only edit/delete their own listings and reviews
+- **User Authentication**: Sign up, login, and logout functionality
+- **Hotel Listings**: Browse, create, edit, and delete hotel listings
+- **Review System**: Rate and review hotels with star ratings and comments
+- **Responsive Design**: Mobile-friendly interface using Bootstrap
+- **Image Management**: Support for external image URLs (e.g., Unsplash)
+- **Authorization**: Users can only edit/delete their own listings and reviews
 
 ## Tech Stack
 
@@ -51,7 +51,7 @@ npm or yarn package manager
    ```
    This will create:
    - A default user (username: `demo`, password: `password123`)
-   - 40 sample property listings
+   - 40 sample hotel listings
 
 5. **Start the application**
    ```bash
@@ -73,21 +73,21 @@ npm or yarn package manager
 wunderlust/
 ├── models/              # Database models
 │   ├── User.js         # User model with authentication
-│   ├── Listing.js      # Property listing model
+│   ├── Listing.js      # Hotel listing model
 │   └── Review.js       # Review model
 ├── routes/              # Express routes
-│   ├── listings.js     # Listing CRUD operations
+│   ├── listings.js     # Hotel listing CRUD operations
 │   ├── reviews.js      # Review operations
 │   └── users.js        # Authentication routes
 ├── views/               # EJS templates
 │   ├── partials/       # Reusable components
 │   │   ├── header.ejs  # Navigation and alerts
 │   │   └── footer.ejs  # Footer with social links
-│   ├── listings/       # Listing-related views
-│   │   ├── index.ejs   # All listings grid
-│   │   ├── show.ejs    # Single listing details
-│   │   ├── new.ejs     # Create listing form
-│   │   └── edit.ejs    # Edit listing form
+│   ├── listings/       # Hotel listing-related views
+│   │   ├── index.ejs   # All hotel listings grid
+│   │   ├── show.ejs    # Single hotel listing details
+│   │   ├── new.ejs     # Create hotel listing form
+│   │   └── edit.ejs    # Edit hotel listing form
 │   └── users/          # User authentication views
 │       ├── signup.ejs  # Registration form
 │       └── login.ejs   # Login form
@@ -96,7 +96,7 @@ wunderlust/
 │       └── style.css   # Main CSS file
 ├── server.js            # Express server entry point
 ├── seed.js              # Database seeding script
-├── sampleListings.js    # Sample data for seeding
+├── sampleListings.js    # Sample hotel data for seeding
 ├── middleware.js        # Authentication middleware
 ├── package.json         # Project dependencies
 └── README.md            # This file
@@ -112,16 +112,16 @@ wunderlust/
 - `GET /logout` - Logout user
 
 ### Listings
-- `GET /listings` - Show all listings
-- `GET /listings/new` - Show create listing form (authenticated)
-- `POST /listings` - Create new listing (authenticated)
-- `GET /listings/:id` - Show specific listing
+- `GET /listings` - Show all hotel listings
+- `GET /listings/new` - Show create hotel listing form (authenticated)
+- `POST /listings` - Create new hotel listing (authenticated)
+- `GET /listings/:id` - Show specific hotel listing
 - `GET /listings/:id/edit` - Show edit form (owner only)
-- `PUT /listings/:id` - Update listing (owner only)
-- `DELETE /listings/:id` - Delete listing (owner only)
+- `PUT /listings/:id` - Update hotel listing (owner only)
+- `DELETE /listings/:id` - Delete hotel listing (owner only)
 
 ### Reviews
-- `POST /reviews/:id` - Add review to listing (authenticated)
+- `POST /reviews/:id` - Add review to hotel listing (authenticated)
 - `DELETE /reviews/:id` - Delete review (author only)
 
 ## Default User Credentials
@@ -132,21 +132,21 @@ After running the seed script, you can login with:
 
 ## Features in Detail
 
-### Property Listings
-- Grid layout displaying property images, titles, prices, and locations
+### Hotel Listings
+- Grid layout displaying hotel images, titles, prices, and locations
 - Responsive design that works on all device sizes
-- Each listing card shows key information and links to detailed view
+- Each hotel listing card shows key information and links to detailed view
 
-### Listing Management
-- Authenticated users can create new listings
-- Property owners can edit and delete their listings
+### Hotel Listing Management
+- Authenticated users can create new hotel listings
+- Hotel owners can edit and delete their listings
 - Form validation ensures data integrity
 
 ### Review System
 - Star rating system (1-5 stars)
 - Comment functionality for detailed feedback
 - Users can only delete their own reviews
-- Reviews are displayed on listing detail pages
+- Reviews are displayed on hotel listing detail pages
 
 ### User Experience
 - Flash messages for success/error feedback
@@ -157,7 +157,7 @@ After running the seed script, you can login with:
 ## Customization
 
 ### Adding New Fields
-To add new fields to listings (e.g., amenities, pet-friendly status):
+To add new fields to hotel listings (e.g., amenities, pet-friendly status):
 1. Update the `Listing` model in `models/Listing.js`
 2. Modify the forms in `views/listings/new.ejs` and `views/listings/edit.ejs`
 3. Update the display templates as needed
@@ -170,7 +170,7 @@ To add new fields to listings (e.g., amenities, pet-friendly status):
 ### Database Schema
 The application uses three main collections:
 - **Users**: Authentication and user management
-- **Listings**: Property information and metadata
+- **Listings**: Hotel information and metadata
 - **Reviews**: User feedback and ratings
 
 ## Troubleshooting
