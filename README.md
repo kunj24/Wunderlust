@@ -215,5 +215,4 @@ This project is licensed under the MIT License.
 
 For support or questions, please open an issue in the repository or contact the development team.
 =======
-# Wunderlust
->>>>>>> be56f2d55a8e887cdcfd32f8fcdb8d12464248a3
+
